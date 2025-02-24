@@ -49,7 +49,7 @@ if not os.path.exists(path_):
     os.makedirs(path_)
 
 def waiting_for_downloading_file(path_, time_=4):
-    end_time = time.time() + time
+    end_time = time.time() + time_
     while time.time() < end_time:
         files = [f for f in os.listdir(path_) if not f.endswith(".crdownload")]
         if files:
