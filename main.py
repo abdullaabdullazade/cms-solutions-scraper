@@ -92,7 +92,7 @@ for student in students_data:
                 time.sleep(2)
                 file_path = file_url.split("/")[-1]
                 new_filename = f"{student['ad']}_{student['soyad']}_{student['ataadi']}_{_class}_{data_submission_value}_{point}BAL_{file_path}"
-                downloaded_file_path = waiting_for_downloading_file(path_, timeout=3)
+                downloaded_file_path = waiting_for_downloading_file(path_, time=3)
                 if downloaded_file_path:
                     try:
                         os.rename(
