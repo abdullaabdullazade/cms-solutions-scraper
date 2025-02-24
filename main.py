@@ -48,7 +48,7 @@ for i in string_data[1:]:
 if not os.path.exists(path_):
     os.makedirs(path_)
 
-def waiting_for_downloading_file(path_, time=4):
+def waiting_for_downloading_file(path_, time_=4):
     end_time = time.time() + time
     while time.time() < end_time:
         files = [f for f in os.listdir(path_) if not f.endswith(".crdownload")]
@@ -92,7 +92,7 @@ for student in students_data:
                 time.sleep(2)
                 file_path = file_url.split("/")[-1]
                 new_filename = f"{student['ad']}_{student['soyad']}_{student['ataadi']}_{_class}_{data_submission_value}_{point}BAL_{file_path}"
-                downloaded_file_path = waiting_for_downloading_file(path_, time=3)
+                downloaded_file_path = waiting_for_downloading_file(path_, time_=3)
                 if downloaded_file_path:
                     try:
                         os.rename(
