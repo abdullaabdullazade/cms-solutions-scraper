@@ -11,7 +11,7 @@ path_ = os.path.join(os.getcwd(), "submissions")
 options = Options()
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
-options.add_argument("--headless")  # eger brauzer gui gormemek istesen
+options.add_argument("--headless")  # eger brauzer gui gormemek istesen sil getsin!!!
 options.add_experimental_option(
     "prefs",
     {
